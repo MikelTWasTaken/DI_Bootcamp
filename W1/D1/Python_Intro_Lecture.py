@@ -24,8 +24,8 @@ greeting = "shabbat shalom"
 # print('index of space', greeting.index('s'))
 
 # #Slice a String
-# print(greeting[2:4])
-# print(greeting[2:])
+print(greeting[2:4])
+print(greeting[2:])
 
 # #Len - String most used methods
 # print(greeting[2:len(greeting)])
@@ -67,7 +67,7 @@ greeting = "shabbat shalom"
 # # # if 12%3 == 0
 # #     print('Yes!')
 
-my_age = 32
+# my_age = 32
 # print(my_age + 213879)
 
 # my_age = str(my_age)
@@ -100,31 +100,31 @@ my_age = 32
 # print(f'Your age is {hg_age}')
 
 #exercise 2
-fn = 'Mike'
-ln = 'Teitelbaum'
-my_age
-print(f'{fn} {ln}')
-print("Hello, {}. You are {}.".format(fn +  ln ,my_age))
+# fn = 'Mike'
+# ln = 'Teitelbaum'
+# my_age
+# print(f'{fn} {ln}')
+# print("Hello, {}. You are {}.".format(fn +  ln ,my_age))
 
-print('python' is not 'python')
-print('python' is 'python')
-print('python' == 'python')
-print('python' != 'python')
-print('HTML' is not 'CSS' and 'Python' is 'Javascript')
+# print('python' is not 'python')
+# print('python' is 'python')
+# print('python' == 'python')
+# print('python' != 'python')
+# print('HTML' is not 'CSS' and 'Python' is 'Javascript')
 
-if 'HTML' is not 'CSS' and 'Python' is 'Javascript':
-    print ("That's Right!")
-else:
-    print("Wrong!")
+# if 'HTML' is not 'CSS' and 'Python' is 'Javascript':
+#     print ("That's Right!")
+# else:
+#     print("Wrong!")
 
-if 'HTML' is not 'CSS' and 'Python' is not 'Javascript':
-    print ("That's Right!")
-else:
-    print("Wrong!")
+# if 'HTML' is not 'CSS' and 'Python' is not 'Javascript':
+#     print ("That's Right!")
+# else:
+#     print("Wrong!")
 
-my_age += 1
-print(my_age)
+# my_age += 1
+# print(my_age)
 
-my_age = input("How old are you? ")
-print(f"You are {my_age} years old")
-print(my_age > 18)
+# my_age = input("How old are you? ")
+# print(f"You are {my_age} years old")
+# print(my_age > 18)
