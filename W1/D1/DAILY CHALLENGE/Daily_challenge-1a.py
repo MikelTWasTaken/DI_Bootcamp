@@ -30,8 +30,16 @@ print (greeting[-1])
 # Hel
 # ... etc
 # HelloWorld
-x = ""
+
+x = "" #you have to define an additional variable to loop through so when you do x+= char it will continue adding to each previous print.
 h = 'HelloWorld'
 for char in h:
     x += char
     print(x)
+
+    import random
+user_str = 'hellowowrld' #this is a string and it needs to be a list
+user_str = list('helloworld') #user the list built-in method so it can easily convert this string into a list.
+random.shuffle(user_str)
+print(user_str)
+print(''.join(user_str))
