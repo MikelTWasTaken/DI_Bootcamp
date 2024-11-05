@@ -62,6 +62,14 @@ n = ()
 for n in numpy.arange(1.5,5,.5): #Range indexes return a list from one index to the other (sequence_name[start:end]).
     print(n)
 
+#the more correct way to do it for the level we are at right now:
+sequence = []
+for i in range(1,6):
+    decimal = i +0.5
+    sequence.append(i)
+    sequence.append(decimal)
+print(sequence[1:-1])
+
 # Can you think of another way to generate a sequence of floats?
 # MY ANSWER - 
 import random
