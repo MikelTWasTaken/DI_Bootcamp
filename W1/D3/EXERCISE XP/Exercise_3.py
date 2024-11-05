@@ -25,24 +25,22 @@ print(list(zip(keys,values)))
 # Print out the family’s total cost for the movies. DONE
 # Bonus: Ask the user to input the names and ages instead of using the provided family variable (Hint: ask the user for names and ages and add them into a family dictionary that is initially empty).
 
-family = {
-    "rick": 43, 
-    'beth': 13, 
-    'morty': 5, 
-    'summer': 8
-}
-member_cost = 0
+total_cost = 0
+member_ind_cost = {}
 
-for member in family:
-    if family[member] <=3:
-        member_cost += 0
-    elif 3< family[member] <= 12:
-        member_cost +=10
+for member, age in family.items():
+    if age <= 3:
+        cost = 0
+    elif 3 < age <= 12:
+        cost = 10
     else:
-        member_cost +=15
+        cost = 15
 
-print(member_cost)
+    member_ind_cost[member] = cost
+    total_cost += cost
 
+print("Total Cost:", total_cost)
+print("Individual Costs:", member_ind_cost)
 
 #Exercise 3: Zara
 # Instructions

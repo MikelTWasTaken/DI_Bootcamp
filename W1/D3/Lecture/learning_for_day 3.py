@@ -18,7 +18,7 @@ def multiply_by2(li):
     return new_list
 
 print(map(multiply_by2, [1,2,3])) 
-#result is <map object at 0x100bfe230> it is not viewable and needs to be turned into a list in order to see the actual result.
+#result is <map object at 0x100bfe230> it is not able and needs to be turned into a list in order to see the actual result.
 #however, with map, you no longer need to turn something into a list with extra code. You only need something that returns (item*2) no append needed. 
 
 
