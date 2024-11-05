@@ -27,7 +27,7 @@ for i in range(1,10): #i is not a name or element it is the number of the iterat
 for i in range(1,len(students)): #you can also print len of a list
     print(f'Hello There {i}')
 
-#FOR INNUMERATE - loop prints the index and the value
+#FOR ENNUMERATE - loop prints the index and the value
 #0 Alex
 #1 Steve
 #2 Sara
