@@ -20,7 +20,7 @@ print(list(zip(keys,values)))
 # if they are between 3 and 12, the ticket is $10.
 # if they are over the age of 12, the ticket is $15.
 # Given the following object:
-# family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
+family = {"rick": 43, 'beth': 13, 'morty': 5, 'summer': 8}
 # How much does each family member have to pay ? RESEARCHING
 # Print out the family’s total cost for the movies. DONE
 # Bonus: Ask the user to input the names and ages instead of using the provided family variable (Hint: ask the user for names and ages and add them into a family dictionary that is initially empty).
@@ -183,4 +183,11 @@ for i in disney_users_A.items():
 print(new_dict)
 
 # # The characters, which names start with the letter “m” or “p”.
-
+new_dict = {}
+for i in disney_users_A.items():
+        print(i[0])
+        if "m" in i[0]:
+            new_dict[i[0]] = i[1]
+        elif "p" in i[0]:
+            new_dict[i[0]] = i[1]
+print(new_dict)
