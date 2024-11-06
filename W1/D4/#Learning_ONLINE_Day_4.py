@@ -63,7 +63,7 @@ def sum(num1, num2):
 print(sum(4,5))
 
 #METHODS US '.' NOTATION
-'hello'.capitalize #autofill after putting in '.' after the string hellp, it provides a list of methods tha can be applied.
+'hello'.capitalize() #autofill after putting in '.' after the string hellp, it provides a list of methods tha can be applied.
 #methods have to be owned by something. In this case its the string 'hello'.
 
 #Python Basics : Docstrings

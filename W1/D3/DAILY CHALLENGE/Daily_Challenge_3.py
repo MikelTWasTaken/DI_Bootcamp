@@ -15,12 +15,14 @@
 
 # "grapes" ➞ { "g": [0], "r": [1], "a": [2], "p": [3]}
 word_dict={} #create a dictionary
-
 word = input('Enter word: ') #ask for a word
-for i, char in enumerate(word): #you need to loop through the word length and if there are any repeating letters so it needs to be enumerated.
+
+for i, char in enumerate(word): #you need to loop through the word and keep track of the index. 
     if char not in word_dict: #if the word is not inside you can add it to the dictionary
-        word_dict[char] = [] #clarify the list
+        word_dict[char] = [] #clarify the list to be added to
         word_dict[char].append(i) # Append the i to the list for this letter
+    else:
+         word_dict[char].append(i)     #if there are any repeating letters so it needs to be enumerated
 print(word_dict)
 
 # Challenge 2
