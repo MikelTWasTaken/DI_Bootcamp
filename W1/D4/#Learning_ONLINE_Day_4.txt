@@ -34,7 +34,7 @@ say_hello()  #if you run default params without an argument it will print the ar
 def sum(num1, num2): #sum will add num1 and num2
 
 #if you run 
-#(sum(4,5) #nothing happens when you run it
+#sum(4,5) #nothing happens when you run it
 #print(sum(4,5)) #prints NONE when you run it
 
 #Functions always have to return something
@@ -89,8 +89,11 @@ super_function(1,2,3,4,5) #but if we click run, we get an error. super_func take
 #so by adding a * to args or ** to kwargs we can add as many args as we want.
     return sum(args) #here we can return the sum of the arguments. prints as a tuple (1,2,3,4,5), args inside the print is a tuple inside the argument. #type: ignore
     print(args) #prints out the parameters
+######
 
 #adding kwargs
-def super_function(*args, **kwargs): #type: ignore
+def super_function(*args, **kwargs): 
+    print(kwargs) #prints a dictionary of {'num1': 5, 'num2':10}
     print(super_function(1,2,3,4,5, num1=5, num2=10)) #you can add keywords to your function parameters.
-    print(kwargs) #prints a dictionary
+#so the final function will usually look like this:
+def super_func
