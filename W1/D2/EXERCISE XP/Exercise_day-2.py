@@ -173,7 +173,7 @@ t_names = ['Brent','Piper', 'Brooklyn', 'Brice', 'Susan']
 old_enough = [] #like the family members in the Loops_learning, it's an empty list because it needs to be added to.
 
 for name in t_names:
-    age = int(input(f'What is {t_names} age? '))
+    age = int(input(f'What is {name} age? '))
     if age <16 or age >21:
         old_enough.append(t_names)
     else:
