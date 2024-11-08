@@ -48,7 +48,7 @@
 number = int(input("give me a number please: "))
 length = int(input("how long is the list? "))
 
-list_of_multiples = [number * i for i in range(1, length + 1)] 
+list_of_multiples = [number * i for i in range(1, length + 1)]
 
 print(list_of_multiples)
 
@@ -67,12 +67,9 @@ print(list_of_multiples)
 # Notes
 # Final strings won’t include words with double letters (e.g. “passing”, “lottery”).
 
-#thoughts: First I need to ask for a string so I'll be using input again. Should I ask for a wrd with multiple letters like in the example? How do you ask for that?
 users_word = input("Give a word with repeating letters: ")
-#same situation as challenge 1. Need to define a new string from instructions.
-new_string = ""
-#next I want to create a code where the word will run through a loop so that any duplicates are removed. for or while? for, because while needs to be proven false.
-for i in range(users_word):
-      if i == -1:
-        print(len(users_word))
-#This one gets me lost. I am not sure which terms, numbers, placements or orders to use. 
+new_string = users_word[0]
+for i in range(1, len(users_word)):
+    if users_word[i] != users_word[i-1]:
+        new_string += users_word[i]
+print("New string without consecutive duplicates:", new_string)
