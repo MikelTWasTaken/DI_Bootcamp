@@ -178,12 +178,12 @@ def main():
 main ()
 
 
-#EX8
-# Instructions
-# This project allows users to take a quiz to test their Star Wars knowledge.
-# The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
+# #EX8
+# # Instructions
+# # This project allows users to take a quiz to test their Star Wars knowledge.
+# # The number of correct/incorrect answers are tracked and the user receives different messages depending on how well they did on the quiz.
 
-# Here is an array of dictionaries, containing those questions and answers
+# # Here is an array of dictionaries, containing those questions and answers
 
 data = [
     {
