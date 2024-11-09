@@ -20,6 +20,24 @@
 # Display a message informing the user whether they can retire or not.
 # As always, test your code to ensure it works.
 
+age = int(input("please input your age: "))
+sex = input("please enter your sex: ").split().lower()
+m_retirement = 67
+w_retirement = 62
+m = 'man'
+w = 'woman'
+if sex == 'man':
+    if age >= m_retirement:
+        print("You are old enough to retire.")
+    else:
+        print(f"You are not old enough to retire. You have {m_retirement - age} years left.")
+if sex == 'woman':
+    if age >= w_retirement:
+        print("You are old enough to retire.")
+    else:
+        print(f"You are not old enough to retire. You have {w_retirement - age} years left.")
+else:
+    print("Invalid input for sex. Please enter 'man' or 'woman'.")
 
 # Exercise 2 : Sum
 # Instructions
@@ -29,7 +47,18 @@
 
 # Hint: treating our number as a int or a str at different points in our code may be helpful
 
+def sum_pattern(x):
+    x_str = str(x)
+    
+    term1 = int(x_str)
+    term2 = int(x_str * 2)
+    term3 = int(x_str * 3)
+    term4 = int(x_str * 4)
+    
+    return term1 + term2 + term3 + term4
 
+result = sum_pattern(3)
+print(result)
 
 # Exercise 3 : Double Dice
 # Instructions
@@ -54,3 +83,32 @@
 # Then my output would show something like this:
 # Total throws: 8
 # Average throws to reach doubles: 2.67.
+
+import random
+def throw_dice():
+    return random.randint(1, 6)
+
+def throw_until_doubles():
+    throws = 0
+    while True:
+        dice1 = throw_dice()
+        dice2 = throw_dice()
+        throws += 1
+        if dice1 == dice2:
+            break
+    return throws
+
+def main():
+    total_throws = 0
+    all_throws = []
+
+    for _ in range(100):
+        throws_to_double = throw_until_doubles()
+        all_throws.append(throws_to_double)
+        total_throws += throws_to_double
+
+    average_throws = total_throws / 100
+
+    print(f"Total throws: {total_throws}")
+    print(f"Average throws to reach doubles: {average_throws:.2f}")
+main()
