@@ -103,7 +103,7 @@ items = {
 }
 
 total_cost = 0
-for item, details in items_with_stock.items():
+for item, details in items.items():
     cost = details["price"] * details["stock"]
     total_cost += cost
     print(f"{item.capitalize()}: {details['stock']} in stock, unit price {details['price']} dollars.")
