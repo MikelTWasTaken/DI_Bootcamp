@@ -46,3 +46,10 @@
 # Create a method called update_item(name, price, spice, gluten). This method checks whether a dish is in the menu, if the dish exists then update it. If not notify the manager that the dish is not in the menu.
 
 # Create a method called remove_item(name). This method should check if the dish is in the menu, if the dish exists then delete it and print the updated dictionary. If not notify the manager that the dish is not in the menu.
+x = 5
+if x < 0:
+    print("Negative")
+elif x > 0:
+    print("Positive")
+else:
+    print("Zero")
