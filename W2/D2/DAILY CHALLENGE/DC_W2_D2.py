@@ -52,3 +52,53 @@
 # The methods used to change page should be chainable, so you can call them one after the other like this: p.nextPage().nextPage()
 # Please set the p.totalPages and p.currentPage attributes to the appropriate number as there cannot be a page 0.
 # If a page is outside of the totalPages attribute, then the goToPage method should go to the closest page to the number provided (e.g. there are only 5 total pages, but p.goToPage(10) is given: the p.currentPage should be set to 5; if 0 or a negative number is given, p.currentPage should be set to 1).
+
+class Pagination:
+    def __init__(self, items=None, pageSize=10):
+        # Initialize with items and pageSize, convert pageSize to int if it's a float
+        self.items = items if items is not None else []
+        self.pageSize = int(pageSize)
+        self.currentPage = 1  # Start at the first page
+        self.totalPages = max(1, (len(self.items) + self.pageSize - 1) // self.pageSize)  # Calculate total pages
+    def getVisibleItems(self):
+        # Calculate start and end index based on the current page and pageSize
+        start = (self.currentPage - 1) * self.pageSize
+        end = start + self.pageSize
+        return self.items[start:end]  # Return items for the current page
+   
+    def prevPage(self): #Move to the previous page.
+        self.currentPage = max(1, self.currentPage -1)
+        return self
+
+    def nextPage(self): #Move to the next page.
+        self.currentPage = min(1, self.currentPage +1)
+        return self
+
+    def firstPage(self):#Go to the first page.
+        self.currentPage = 1
+        return self
+
+    def lastPage(self): #Go to the last page.
+        self.currentPage =  self.totalPages
+        return self
+
+    def goToPage(self, pageNum): #Go to a specific page.
+        self.currentPage = max(1, int(pageNum) )
+        return self 
+
+alphabetList = list("abcdefghijklmnopqrstuvwxyz")
+p = Pagination(alphabetList, 4)
+# p.getVisibleItems() 
+# # ["a", "b", "c", "d"]
+# p.nextPage()
+# p.getVisibleItems()
+# # ["e", "f", "g", "h"]
+# p.lastPage()
+# p.getVisibleItems()
+# # ["y", "z"]
+
+print(p.getVisibleItems())
+p.nextPage()
+print(p.getVisibleItems())
+p.lastPage()
+print(p.getVisibleItems())
