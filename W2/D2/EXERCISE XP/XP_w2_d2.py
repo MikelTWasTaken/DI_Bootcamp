@@ -232,16 +232,16 @@ import Family_time
 class TheIncredibles(Family_time):
     def __init__(self,members,last_name):
         super().__init__ (members, last_name, )
-        self.trained = trained
+        self.trained = trained # type: ignore
     def powers(self):
         for member in self.members:
-            if member['name'] == name:
+            if member['name'] == name: # type: ignore
                 if member['age'] >= 18:
                     print(f"{member['incredible_name']} uses their power: {member['power']}")
                 else:
                     raise Exception(f"{member['name']} is not over 18 years old and cannot use their power.")
                 return
-        print(f"No member with the name {name} found.")
+        print(f"No member with the name {name} found.") # type: ignore
     
     def family_presentation(self):
         print(f"Here is your super family!")
