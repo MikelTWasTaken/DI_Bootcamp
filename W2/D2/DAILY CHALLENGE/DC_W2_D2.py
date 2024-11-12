@@ -102,3 +102,6 @@ p.nextPage()
 print(p.getVisibleItems())
 p.lastPage()
 print(p.getVisibleItems())
+p.goToPage(0)
+print(p.getVisibleItems())
+
