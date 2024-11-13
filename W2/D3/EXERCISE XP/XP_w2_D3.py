@@ -141,19 +141,22 @@ print(time_until_new_year())
 # Exercise 6 : Birthday and minutes
 # Instructions
 # Create a function that accepts a birthdate as an argument (in the format of your choice), then displays a message stating how many minutes the user lived in his life.
+
+from datetime import datetime, date
+
 class Person:
     def __init__(self, name, birthday):
         self.name = name
-        self.birthday = birthday
+        self.birthday = birthday  # Expecting a date object instead of a string
 
-    def __str__(self):
-        return self.name
-    
-    def __repr__(self):
-        return f'The person is {self.name} and the birthday is {self.birthday}'
+    def minutes_lived(self):
+        now = datetime.now()
+        minutes = (now - datetime.combine(self.birthday, datetime.min.time())).days * 24 * 60  # Days to hours to minutes
+        return minutes
 
-person1 = Person('Mike', '04/06/1990')
-print(person1.__repr__())
+# Example usage
+person1 = Person('Mike', date(1992, 6, 4))  # Passing date directly
+print(f"{person1.name} has lived about {person1.minutes_lived()} minutes.")
 
 # Exercise 7 : Faker Module
 # Instructions

@@ -45,7 +45,7 @@
 # print(student.replace('r', 'l') + 'hello')
 
 
-#NUMBERS: integer, float, comple numbers, boolean
+#NUMBERS: integer, float, complex numbers, boolean
 
 # int_num = 5 #int: whole numbers
 # float_num = 7.5
