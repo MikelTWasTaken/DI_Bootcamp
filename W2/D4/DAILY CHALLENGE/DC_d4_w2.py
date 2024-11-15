@@ -24,7 +24,7 @@ from collections import Counter
 class T_Analysis:
     def __init__(self, words):
         self.words = words.lower()
-        self.word_list = self.words.split()
+        self.word_list = self.words.split(" ")
 
     def word_frequency(self,recurring_word):
         recurring_word = recurring_word.lower()
