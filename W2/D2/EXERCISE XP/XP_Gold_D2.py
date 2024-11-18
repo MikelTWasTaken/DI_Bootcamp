@@ -8,6 +8,8 @@
 # deposit : - (a method) accepts a positive int and adds to the balance, raise an Exception if the int is not positive.
 # withdraw : - (a method) accepts a positive int and deducts from the balance, raise an Exception if not positive
 
+class BankAccount:
+    
 
 # Part II : Minimum balance account
 
