@@ -1,3 +1,4 @@
+-- PART 1
 -- CREATE TABLE Customers (
 --     id SERIAL PRIMARY KEY,
 --     first_name VARCHAR(50) NOT NULL,
@@ -34,4 +35,7 @@
 -- FROM Customer c
 -- LEFT JOIN Customer_Profile cp ON c.id = cp.customer_id
 -- WHERE cp.isLoggedIn = false OR cp.isLoggedIn IS NULL;
+
+-- PART 2
+
 

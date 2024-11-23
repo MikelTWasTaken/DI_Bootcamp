@@ -51,3 +51,4 @@
 -- DELETE FROM Student WHERE name = 'John';
 -- When we delete a student like "John" from the Student table, the ON DELETE CASCADE 
 -- rule automatically deletes all related records from the Library table where John's ID is referenced.
+
