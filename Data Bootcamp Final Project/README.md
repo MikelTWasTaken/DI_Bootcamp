@@ -1,5 +1,5 @@
 # SUPPLY CHAIN ANALYTICS - OPEN THE PACKAGE COMPANY
-![Screenshot of project](/Users/teitelbaumsair/Desktop/Data Bootcamp Repo/DI_Bootcamp/Data Bootcamp Final Project/Media/Screenshot 2025-01-13 at 15.30.49.png)
+![Screenshot of project](</Users/teitelbaumsair/Desktop/Data Bootcamp Repo/DI_Bootcamp/Data Bootcamp Final Project/Media/Screenshot 2025-01-13 at 15.30.49.png>)
 ## Introduction
 Data analysis for "Open The Package", will look at supply chain data to optimize inventory levels, delivery times, and reduce transportation costs. By forecasting demand and identifying inefficiencies, I'll align supply chain strategies with business goals and propose strategic improvements. Through insightful dashboards, I'll provide actionable recommendations to enhance supplier relationships, streamline processes, and drive cost-saving solutions, ultimately improving overall business performance.
 ## Table of Contents
