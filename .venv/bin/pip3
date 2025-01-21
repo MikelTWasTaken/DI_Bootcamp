@@ -1,4 +1,6 @@
-#!/Users/teitelbaumsair/Desktop/DI_Bootcamp/.venv/bin/python
+#!/bin/sh
+'''exec' "/Users/teitelbaumsair/Desktop/Data Bootcamp Repo/DI_Bootcamp/.venv/bin/python3.12" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/teitelbaumsair/Desktop/DI_Bootcamp/.venv"
+setenv VIRTUAL_ENV "/Users/teitelbaumsair/Desktop/Data Bootcamp Repo/DI_Bootcamp/.venv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

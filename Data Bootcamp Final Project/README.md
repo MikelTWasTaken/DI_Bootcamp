@@ -1,5 +1,6 @@
 # SUPPLY CHAIN ANALYTICS - OPEN THE PACKAGE COMPANY
-![Screenshot of project](</Users/teitelbaumsair/Desktop/Data Bootcamp Repo/DI_Bootcamp/Data Bootcamp Final Project/Media/Screenshot 2025-01-13 at 15.30.49.png>)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 ## Introduction
 Data analysis for "Open The Package", will look at supply chain data to optimize inventory levels, delivery times, and reduce transportation costs. By forecasting demand and identifying inefficiencies, I'll align supply chain strategies with business goals and propose strategic improvements. Through insightful dashboards, I'll provide actionable recommendations to enhance supplier relationships, streamline processes, and drive cost-saving solutions, ultimately improving overall business performance.
 ## Table of Contents
@@ -44,12 +45,13 @@ To set up and execute the project, follow the steps below:
 7. **Recommendations and Strategic Improvements**
    - Analyze the results from the data analysis to propose actionable recommendations.
    - Suggest improvements to supplier relationships, production processes, or inventory management to align with business goals.
+   
 ## Usage
 How to run the scripts and interpret the outputs.
 
 ## Data
 Details about the datasets:
-- Source
+- [Source](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
 - Preprocessing steps
 
 ## Methodology
@@ -69,4 +71,4 @@ Possible extensions or improvements.
 
 
 ## License
-Publicly accesible Dataset.
+CC0: Public Domain
