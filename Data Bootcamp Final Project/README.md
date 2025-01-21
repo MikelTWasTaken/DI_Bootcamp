@@ -1,8 +1,7 @@
-# SUPPLY CHAIN ANALYTICS - OPEN THE PACKAGE COMPANY
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+# SUPPLY CHAIN ANALYTICS
 
 ## Introduction
-Data analysis for "Open The Package", will look at supply chain data to optimize inventory levels, delivery times, and reduce transportation costs. By forecasting demand and identifying inefficiencies, I'll align supply chain strategies with business goals and propose strategic improvements. Through insightful dashboards, I'll provide actionable recommendations to enhance supplier relationships, streamline processes, and drive cost-saving solutions, ultimately improving overall business performance.
+This data analysis for supply chain data, will look at supply chain data to optimize inventory levels, delivery times, and reduce transportation costs. By forecasting demand and identifying inefficiencies, I'll align supply chain strategies with business goals and propose strategic improvements. Through insightful dashboards, I'll provide actionable recommendations to enhance supplier relationships, streamline processes, and drive cost-saving solutions, ultimately improving overall business performance.
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
