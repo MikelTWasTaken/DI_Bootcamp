@@ -35,8 +35,7 @@ To set up and execute the project, follow these steps:
 
 ## Modeling and Analysis
 - Conduct risk analysis to identify potential risks in the supply chain and suggest mitigation strategies.
-- Implement demand forecasting using statistical models such as ARIMA and regression.
-- Develop optimization models for inventory management and transportation cost minimization.
+- Develop optimization models for fraud management and delivery risk minimization. 
 
 ## Dashboard Creation and Visualization
 - Design intuitive and interactive dashboards using Tableau to visualize key metrics, trends, and insights.
@@ -63,7 +62,7 @@ Description of the methods and tools used, including data segmentation and trend
 # Results
 
 Summary of findings and key visualizations, including:
-- Department sales trends
+- Department sales trends and fraud detection
 - Customer segment performance
 - Delivery trends and late delivery risks
 
