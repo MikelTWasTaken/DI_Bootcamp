@@ -8,9 +8,6 @@
 # deposit : - (a method) accepts a positive int and adds to the balance, raise an Exception if the int is not positive.
 # withdraw : - (a method) accepts a positive int and deducts from the balance, raise an Exception if not positive
 
-class BankAccount:
-    
-
 # Part II : Minimum balance account
 
 # Create a MinimumBalanceAccount that inherits from BankAccount.
@@ -61,3 +58,186 @@ class BankAccount:
 # show_account_menu:
 # Accepts an instance of BankAccount or MinimumBalanceAccount.
 # The method will start a loop giving the user the option to deposit, withdraw or exit.
+
+
+class User:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+
+    def show_details(self):
+        print("Personal Details")
+        print("")
+        print("Name ", self.name)
+        print("Age ", self.age)
+        print("Gender ", self.gender)
+
+class BankAccount(User):
+    total_deposit = 0
+    total_withdraw = 0
+
+    def __init__(self, name, age, gender, balance):
+        # Initialize the parent class (User)
+        super().__init__(name, age, gender)
+        self.balance = balance
+
+    def show_info(self):
+        return f"{self.name} has a remaining balance of: ${self.balance:.2f}"
+
+    def deposit(self, amount):
+        if amount <= 0:
+            raise Exception("The deposit amount should be positive")
+        else:
+            self.balance += amount
+            BankAccount.total_deposit += amount
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise Exception("Insufficient funds")
+        elif amount < 0:
+            raise Exception("The withdraw amount should be greater than zero")
+        else:
+            self.balance -= amount
+            BankAccount.total_withdraw += amount
+
+# Creating a BankAccount instance
+user_account = BankAccount("John Doe", 30, "Male", 0)
+is_running = True
+
+while is_running:
+    print("Banking Program")
+    print("1. Show Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+
+    choice = input("Enter your choice (1-4): ")
+
+    if choice == "1":
+        print(user_account.show_info())
+    elif choice == "2":
+        amount = float(input("Enter deposit amount: "))
+        user_account.deposit(amount)
+        print(f"Deposited ${amount:.2f}. Current balance: ${user_account.balance:.2f}")
+    elif choice == "3":
+        amount = float(input("Enter withdraw amount: "))
+        user_account.withdraw(amount)
+        print(f"Withdrew ${amount:.2f}. Current balance: ${user_account.balance:.2f}")
+    elif choice == "4":
+        is_running = False
+    else:
+        print("Invalid choice. Please try again.")
+
+print("Thank you for using the banking program!")
+
+class MinimumBalanceAccount(BankAccount):
+    def __init__(self, name, age, gender, balance, minimum_balance=0):
+        super().__init__(name, age, gender, balance)
+        self.minimum_balance = minimum_balance
+
+    def withdraw(self, amount):
+        if self.balance - amount < self.minimum_balance:
+            raise Exception(f"Cannot withdraw. Balance must remain above the minimum balance of ${self.minimum_balance}")
+        super().withdraw(amount)
+
+
+class BankAccount(User):
+    total_deposit = 0
+    total_withdraw = 0
+
+    def __init__(self, name, age, gender, balance, username, password):
+        super().__init__(name, age, gender)
+        self.balance = balance
+        self.username = username
+        self.password = password
+        self.authenticated = False
+
+    def authenticate(self, username, password):
+        if self.username == username and self.password == password:
+            self.authenticated = True
+            print("Authentication successful!")
+        else:
+            raise Exception("Authentication failed")
+
+    def deposit(self, amount):
+        if not self.authenticated:
+            raise Exception("You must authenticate first")
+        super().deposit(amount)
+
+    def withdraw(self, amount):
+        if not self.authenticated:
+            raise Exception("You must authenticate first")
+        super().withdraw(amount)
+
+class ATM:
+    def __init__(self, account_list, try_limit):
+        if not isinstance(account_list, list):
+            raise Exception("account_list must be a list of BankAccount or MinimumBalanceAccount instances.")
+        if any(not isinstance(account, (BankAccount, MinimumBalanceAccount)) for account in account_list):
+            raise Exception("All items in account_list must be instances of BankAccount or MinimumBalanceAccount.")
+        if try_limit <= 0:
+            print("Invalid try_limit input. Setting try_limit to 2.")
+            try_limit = 2
+        self.account_list = account_list
+        self.try_limit = try_limit
+        self.current_tries = 0
+
+    def show_main_menu(self):
+        while True:
+            print("Main Menu:")
+            print("1. Log in")
+            print("2. Exit")
+            choice = input("Enter your choice (1-2): ")
+
+            if choice == "1":
+                username = input("Enter your username: ")
+                password = input("Enter your password: ")
+                self.log_in(username, password)
+            elif choice == "2":
+                break
+            else:
+                print("Invalid choice, please try again.")
+
+    def log_in(self, username, password):
+        for account in self.account_list:
+            try:
+                account.authenticate(username, password)
+                self.show_account_menu(account)
+                return
+            except Exception as e:
+                print(e)
+        
+        self.current_tries += 1
+        if self.current_tries >= self.try_limit:
+            print("Max tries reached. Shutting down the ATM.")
+            exit()
+        else:
+            print(f"Invalid credentials. Try {self.current_tries}/{self.try_limit}.")
+
+    def show_account_menu(self, account):
+        while True:
+            print(f"Welcome, {account.name}")
+            print("1. Deposit")
+            print("2. Withdraw")
+            print("3. Exit")
+            choice = input("Enter your choice (1-3): ")
+
+            if choice == "1":
+                amount = float(input("Enter deposit amount: "))
+                try:
+                    account.deposit(amount)
+                    print(f"Deposited ${amount:.2f}. New balance: ${account.balance:.2f}")
+                except Exception as e:
+                    print(e)
+            elif choice == "2":
+                amount = float(input("Enter withdraw amount: "))
+                try:
+                    account.withdraw(amount)
+                    print(f"Withdrew ${amount:.2f}. New balance: ${account.balance:.2f}")
+                except Exception as e:
+                    print(e)
+            elif choice == "3":
+                break
+            else:
+                print("Invalid choice, please try again.")
